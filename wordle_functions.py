@@ -36,4 +36,3 @@ def get_guess():
 guess = get_guess()
 word = choose_word()
 
-print(word)
