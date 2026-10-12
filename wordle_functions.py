@@ -1,8 +1,29 @@
-from wonderwords import RandomWord
+import random
+words = [
+    "apple", "beach", "brain", "bread", "chair",
+    "chest", "cloud", "coast", "dance", "dream",
+    "drink", "earth", "faith", "field", "flame",
+    "floor", "fruit", "ghost", "glass", "grape",
+    "grass", "green", "heart", "horse", "house",
+    "juice", "knife", "lemon", "light", "magic",
+    "money", "month", "mouse", "music", "night",
+    "ocean", "paint", "paper", "party", "peace",
+    "peach", "phone", "piano", "piece", "pilot",
+    "pizza", "place", "plane", "plant", "plate",
+    "point", "power", "queen", "quiet", "radio",
+    "river", "robot", "round", "salad", "scale",
+    "scene", "score", "shark", "sheep", "shirt",
+    "shore", "sleep", "smile", "snake", "snowy",
+    "sound", "space", "spoon", "sport", "stage",
+    "stone", "store", "storm", "story", "sugar",
+    "table", "teach", "tiger", "toast", "today",
+    "total", "touch", "tower", "track", "train",
+    "truck", "trust", "uncle", "value", "video",
+    "voice", "water", "whale", "world", "youth"
+]
 
 def choose_word():
-    r = RandomWord()
-    secret_word = r.word(word_min_length=5, word_max_length=5)
+    secret_word = random.choice(words)
     return secret_word
 
 def get_guess():
@@ -15,5 +36,4 @@ def get_guess():
 guess = get_guess()
 word = choose_word()
 
-print(guess)
 print(word)
