@@ -24,14 +24,14 @@ words = [
 
 def choose_word():
     secret_word = random.choice(words)
-    return secret_word
+    return str(secret_word)
 
 def get_guess():
     player_guess = input("Guess a 5 letter word: ").lower()
     while len(player_guess) != 5:
         player_guess = input("Your guess must be 5 letters. Try again: ")
 
-    return player_guess
+    return str(player_guess)
 
 guess = get_guess()
 word = choose_word()

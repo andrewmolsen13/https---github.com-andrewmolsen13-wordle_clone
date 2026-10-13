@@ -1,8 +1,8 @@
 #Welcome player to game
 #bringin wordle_functions to run program
 #give player 6 guesses
-import wordle_functions
+from wordle_functions import get_guess, choose_word
 
-word = 'Drugs'
+word = get_guess
 
-word[0]
+print(word[0])
