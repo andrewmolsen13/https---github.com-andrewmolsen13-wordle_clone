@@ -5,4 +5,3 @@ from wordle_functions import get_guess, choose_word
 
 word = get_guess
 
-print(word[0])
