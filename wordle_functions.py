@@ -27,10 +27,30 @@ def choose_word():
     return str(secret_word)
 
 def get_guess():
-    player_guess = input("Guess a 5 letter word: ").lower()
+    player_guess = input("\nGuess a 5 letter word: ").lower()
     while len(player_guess) != 5:
-        player_guess = input("Your guess must be 5 letters. Try again: ")
+        player_guess = input("\nYour guess must be 5 letters. Try again: ").lower
 
     return str(player_guess)
 
+def evaluate_guess(player_guess, secret_word):
+    feedback = []
+    for i in range(len(player_guess)):
+        if player_guess[i] == secret_word[i]:
+            feedback.append("G")
+        elif player_guess[i] in secret_word:
+             feedback.append("Y")
+        else:
+            feedback.append("-")
+    return  " ".join(feedback)
 
+def display_guess(player_guess, feedback):
+    print(f"""\nGuess: {player_guess}
+Feedback: {feedback}""")
+
+def has_won(player_guess, secret_word):
+    if player_guess == secret_word:
+        has_won = True
+    else:
+        has_won = False
+    return has_won
