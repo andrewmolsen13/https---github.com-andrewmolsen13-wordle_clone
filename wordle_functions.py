@@ -33,6 +33,4 @@ def get_guess():
 
     return str(player_guess)
 
-guess = get_guess()
-word = choose_word()
 
