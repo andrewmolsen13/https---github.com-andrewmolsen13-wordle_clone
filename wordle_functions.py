@@ -29,7 +29,7 @@ def choose_word():
 def get_guess():
     player_guess = input("\nGuess a 5 letter word: ").lower()
     while len(player_guess) != 5:
-        player_guess = input("\nYour guess must be 5 letters. Try again: ").lower
+        player_guess = input("\nYour guess must be 5 letters. Try again: ").lower()
 
     return str(player_guess)
 
