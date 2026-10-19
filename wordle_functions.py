@@ -26,10 +26,13 @@ def choose_word():
     secret_word = random.choice(words)
     return str(secret_word)
 
-def get_guess():
+def get_guess(previous_guesses):
     player_guess = input("\nGuess a 5 letter word: ").lower()
+    while player_guess in previous_guesses:
+        player_guess = input("\nYou've already guessed that. Try again: ").lower()
     while len(player_guess) != 5:
         player_guess = input("\nYour guess must be 5 letters. Try again: ").lower()
+    
 
     return str(player_guess)
 
